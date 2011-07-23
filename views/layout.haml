@@ -2,6 +2,18 @@
 %html
   %head
     %title where are the records?
+    %link{ :href => '/styles.css', :rel => :stylesheet, :type => 'text/css' }
   %body
-    #main
-      = yield
+  
+    #container
+    
+      #main
+        = yield
+        
+      .push
+      
+    #footer
+      #inner_footer
+        A
+        %a{ :href => "http://jklabs.net" } jklabs
+        production.
