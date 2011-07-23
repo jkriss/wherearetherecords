@@ -218,3 +218,42 @@ input[type=submit] {
 	position:relative;
 	top:1px;
 }
+
+@media only screen and (max-device-width: 480px) {
+  
+  body {
+    font-size: 1.1em;
+  }
+  
+  input[type=submit] {
+    font-size: 18pt;
+  }
+  
+  #main {
+    padding: 0;
+  }
+
+  #smallsearch {
+    padding: 20px;
+  }
+
+  li.store {
+    width: auto;
+    margin: 0;
+    -moz-box-shadow: none;
+    border-top: 1px solid #ddd;
+  }
+  
+  #container {
+    margin: 0 auto -45px;
+  }
+
+  #footer, .push {
+    height: 45px;  
+  }
+
+  #footer {
+    font-size: 12pt;
+  }
+}
+
