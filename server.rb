@@ -63,7 +63,9 @@ get '/' do
 end
 
 post '/search' do
-  redirect "/#{CGI.escape(params[:location])}"
+  q = params[:location]
+  q = CGI.escape(q) unless q =~ /(-?\d+.\d+),(-?\d+.\d+)/
+  redirect "/#{q}"
 end
 
 get '/favicon.ico' do

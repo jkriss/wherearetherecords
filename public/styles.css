@@ -49,7 +49,7 @@ html, body {
 
 body {
   font-size: 0.8em;
-  background: #f1ede8;
+  background: #efefef url(/bg.gif);
   color: #333;
 }
 
@@ -200,7 +200,7 @@ input[type=submit] {
 	-moz-border-radius:6px;
 	-webkit-border-radius:6px;
 	border-radius:6px;
-	border:1px solid #dcdcdc;
+	border:1px solid #bbb;
 	display:inline-block;
 	color:#777777;
 	font-family:arial;
