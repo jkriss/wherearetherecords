@@ -29,7 +29,7 @@ html, body {
 }
 
 #footer {
-  background: #000;
+  background: #333;
 }
 
 #footer a {
@@ -49,8 +49,8 @@ html, body {
 
 body {
   font-size: 0.8em;
-  color: #fff;
-  background: #212424;
+  background: #fcfbfa url(/bg.jpg);
+  color: #333;
 }
 
 a {
@@ -77,7 +77,6 @@ ul#stores {
 }
 
 li.store {
-  color: #333;
   width: 440px;
   background: #fff;
   font-size: 1.3em;
@@ -87,10 +86,10 @@ li.store {
   -webkit-box-shadow: 1px 1px 3px rgba(0,0,0, 0.2);
   -o-box-shadow: 1px 1px 3px rgba(0,0,0, 0.2);
   box-shadow: 1px 1px 3px rgba(0,0,0, 0.2);
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
 }
 
 .details {
@@ -160,19 +159,15 @@ input[type=text] {
   -o-border-radius: 20px;
   border-radius: 20px;
   padding: 4px 8px;
-  border: none;
+  border: 1px solid #aaa;
 }
 
 #bigsearch input[type=text], #smallsearch input[type=text] {
-  font-size: 0.7em;
+  font-size: 0.7em;;
 }
 
 #bigsearch .yelp {
   margin-top: 20px;
-}
-
-#smallsearch .yelp {
-  margin-top: 10px;
 }
 
 .no_results {
