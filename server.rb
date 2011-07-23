@@ -32,8 +32,11 @@ class RecordStoreFinder
     path += "&ll=#{options[:latlong]}" if options[:latlong]
 
     result = Mash.new JSON.parse(access_token.get(path).body)
-    puts "-- response: #{result}"
-    result.businesses
+    if result.error
+      raise Exception.new result.error.text
+    else
+      result.businesses
+    end
   end
   
 end
@@ -45,6 +48,11 @@ helpers do
     "http://maps.google.com?q=#{CGI.escape(q)}"
   end
   
+end
+
+error do
+  @error_message = env['sinatra.error'].message
+  haml :error
 end
 
 get '/' do

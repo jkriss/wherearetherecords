@@ -154,3 +154,7 @@ input[type=text] {
   font-size: 12pt;
   color: #999
 }
+
+#error {
+  font-size: 1.2em;
+}
