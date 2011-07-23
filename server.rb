@@ -7,8 +7,11 @@ require 'hashie'
 require 'oauth'
 require 'haml'
 require 'json'
+require 'padrino-helpers'
 
 include Hashie
+
+Sinatra.register Padrino::Helpers
 
 class RecordStoreFinder
   include HTTParty
@@ -26,9 +29,10 @@ class RecordStoreFinder
     # path = "/v2/search?category_filter=vinyl_records&sort=1" # nearest first
     path = "/v2/search?term=vinyl+records&sort=1" # nearest first
     path += "&location=#{CGI.escape(options[:address])}" if options[:address]
-    path += "&ll=#{options[:latitude]},#{options[:longitude]}" if options[:latitude] && options[:longitude]
+    path += "&ll=#{options[:latlong]}" if options[:latlong]
 
     result = Mash.new JSON.parse(access_token.get(path).body)
+    puts "-- response: #{result}"
     result.businesses
   end
   
@@ -54,8 +58,18 @@ post '/search' do
   redirect "/#{CGI.escape(params[:location])}"
 end
 
+get '/favicon.ico' do
+  404
+end
+
 get '/:address' do
   @address = params[:address]
-  @stores = RecordStoreFinder.find :address => @address
+  if @address =~ /(-?\d+.\d+),(-?\d+.\d+)/
+    puts "-- finding by lat long: #{@address}"
+    @stores = RecordStoreFinder.find :latlong => @address
+  else
+    puts "-- finding by address: #{@address}"
+    @stores = RecordStoreFinder.find :address => @address
+  end
   haml :stores
 end
