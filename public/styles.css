@@ -49,7 +49,7 @@ html, body {
 
 body {
   font-size: 0.8em;
-  background: #fcfbfa;
+  background: #fcfbfa url(/bg.jpg);
   color: #333;
 }
 
@@ -83,7 +83,13 @@ li.store {
   border: none;
   padding: 15px;
   -moz-box-shadow: 1px 1px 3px rgba(0,0,0, 0.2);
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0, 0.2);
+  -o-box-shadow: 1px 1px 3px rgba(0,0,0, 0.2);
+  box-shadow: 1px 1px 3px rgba(0,0,0, 0.2);
   -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
 }
 
 .details {
