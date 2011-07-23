@@ -48,6 +48,14 @@ body {
   color: #333;
 }
 
+a {
+  color: #395473;
+}
+
+a:visited {
+  color: #999;
+}
+
 
 #main {
   padding: 30px 50px;
@@ -61,6 +69,18 @@ h2 img {
 
 ul#stores {
   margin-top: 20px;
+}
+
+li.store {
+  width: 400px;
+  padding-top: 20px;
+  background: #fff;
+  border-top: 1px dotted #ddd;
+}
+
+li.store:last-child {
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #ddd;
 }
 
 img.store {

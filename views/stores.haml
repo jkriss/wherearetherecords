@@ -15,10 +15,11 @@
           %img.store{ :src => store.image_url }
         
         .details
-          %a.name{ :href => map_url(store) }= store.name
+          .name= store.name
           %ul.address
-            - store.location.display_address.each do |address_line|
-              %li= address_line
+            %a{ :href => map_url(store) }
+              - store.location.display_address.each do |address_line|
+                %li= address_line
 
           - if store.display_phone
             .phone= store.display_phone.sub '+',''
