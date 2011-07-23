@@ -127,7 +127,7 @@ li.store {
 }
 
 
-#bigsearch input {
+#bigsearch input, #smallsearch input {
   vertical-align: middle;
 }
 
@@ -141,7 +141,7 @@ input[type=text] {
   border: 1px solid #aaa;
 }
 
-#bigsearch input[type=text] {
+#bigsearch input[type=text], #smallsearch input[type=text] {
   font-size: 0.7em;;
 }
 

@@ -45,6 +45,9 @@ end
 
 get '/' do
   haml :index
+  # @address = '02139'
+  # @stores = RecordStoreFinder.find :address => @address
+  # haml :stores
 end
 
 post '/search' do
