@@ -70,6 +70,12 @@ get '/favicon.ico' do
   404
 end
 
+get '/nothing' do
+  s = Mash.new :name => 'The place', :display_phone => '+1-617-555-1212', :location => { :address => '1 main st', :postal_code => '02139', :display_address => ['1 Main st', 'Central Square', 'Cambridge MA 02139']}, :rating_img_url_small => "http://media2.px.yelpcdn.com/static/20101216418129184/i/ico/stars/stars_small_4.png"
+  @stores = [s,s,s,s,s]
+  haml :stores
+end
+
 get '/:address' do
   @address = params[:address]
   if @address =~ /(-?\d+.\d+),(-?\d+.\d+)/

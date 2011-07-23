@@ -49,6 +49,7 @@ html, body {
 
 body {
   font-size: 0.8em;
+  background: #fcfbfa;
   color: #333;
 }
 
@@ -76,15 +77,17 @@ ul#stores {
 }
 
 li.store {
-  width: 400px;
-  padding-top: 20px;
+  width: 440px;
   background: #fff;
-  border-top: 1px dotted #ddd;
+  font-size: 1.3em;
+  border: none;
+  padding: 15px;
+  -moz-box-shadow: 1px 1px 3px rgba(0,0,0, 0.2);
+  -moz-border-radius: 8px;
 }
 
-li.store:last-child {
-  padding-bottom: 20px;
-  border-bottom: 1px dotted #ddd;
+.details {
+  padding-left: 115px;
 }
 
 img.store {
@@ -130,6 +133,10 @@ li.store {
   text-align: center;
 }
 
+#bigsearch input[type=text] {
+  position: relative;
+  top: -1px;
+}
 
 #bigsearch input, #smallsearch input {
   vertical-align: middle;
@@ -168,8 +175,7 @@ input[type=text] {
 }
 
 #bigsearch input[type=submit] {
-  display: block;
-  margin: 10px auto;
+  margin-top: 20px;
 }
 
 input[type=submit] {
