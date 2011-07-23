@@ -49,7 +49,7 @@ html, body {
 
 body {
   font-size: 0.8em;
-  background: #fcfbfa url(/bg.jpg);
+  background: #f1ede8;
   color: #333;
 }
 
@@ -154,10 +154,10 @@ li.store {
 
 input[type=text] {
   color: #666;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -o-border-radius: 20px;
-  border-radius: 20px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
   padding: 4px 8px;
   border: 1px solid #aaa;
 }
@@ -168,6 +168,10 @@ input[type=text] {
 
 #bigsearch .yelp {
   margin-top: 20px;
+}
+
+#smallsearch .yelp {
+  margin-top: 10px;
 }
 
 .no_results {
