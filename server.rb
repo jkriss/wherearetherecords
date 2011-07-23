@@ -43,7 +43,16 @@ helpers do
   
 end
 
+get '/' do
+  haml :index
+end
+
+post '/search' do
+  redirect "/#{CGI.escape(params[:location])}"
+end
+
 get '/:address' do
-  @stores = RecordStoreFinder.find :address => params[:address]
+  @address = params[:address]
+  @stores = RecordStoreFinder.find :address => @address
   haml :stores
 end
