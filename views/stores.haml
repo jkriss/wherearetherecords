@@ -16,8 +16,7 @@
     - @stores.each do |store|
       %li.store
       
-        - if store.image_url
-          %img.store{ :src => store.image_url }
+        %img.store{ :src => store.image_url || 'http://static.albumsaur.us/whitelabel.jpg' }
         
         .details
           .name= store.name
