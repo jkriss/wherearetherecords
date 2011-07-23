@@ -1,0 +1,24 @@
+- if @stores.nil? || @stores.empty?
+  .no_results
+    Sorry, no records stores found
+
+- else
+  %ul
+    - @stores.each do |store|
+      %li
+      
+        %a.name{ :href => map_url(store) }= store.name
+        - if store.image_url
+          %img.store{ :src => store.image_url }
+        %ul.address
+          - store.location.display_address.each do |address_line|
+            %li= address_line
+
+        - if store.display_phone
+          .phone= store.display_phone.sub '+',''
+      
+        %a{ :href => store.url }
+          %img.rating{ :src => store.rating_img_url_small, :alt => 'yelp rating', :style => 'border:0' }
+        
+      
+        %a.rating_link{ :href => store.url } read reviews
