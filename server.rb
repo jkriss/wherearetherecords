@@ -48,6 +48,12 @@ helpers do
     "http://maps.google.com?q=#{CGI.escape(q)}"
   end
   
+  def map_img_url(store)
+    loc = "#{store.location.address} #{store.location.postal_code}"
+    loc = CGI.escape(loc)
+    "http://maps.google.com/maps/api/staticmap?center=#{loc}&markers=size:small|color:blue|#{loc}&zoom=14&size=200x200&sensor=false"
+  end
+  
 end
 
 error do

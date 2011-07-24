@@ -17,6 +17,9 @@
       
         %img.store{ :src => store.image_url || '/record.jpg' }
         
+        %a.map{ :href => map_url(store) }
+          %img.map{ :src => map_img_url(store) }
+        
         .details
           .name= store.name
           %ul.address
