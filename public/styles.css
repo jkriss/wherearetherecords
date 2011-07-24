@@ -233,8 +233,12 @@ input[type=submit] {
     padding: 0;
   }
 
-  #smallsearch {
+  #smallsearch, #error {
     padding: 20px;
+  }
+  
+  #error {
+    font-size: 1.2em;
   }
 
   li.store {
