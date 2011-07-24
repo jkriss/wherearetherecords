@@ -252,6 +252,12 @@ input[type=submit] {
     border-radius: 0;
   }
   
+  li.store .name{
+    font-family: ff-market-web, Helvetica, Arial, sans-serif;
+    font-size: 1.6em;
+    margin: 10px 0;
+  }
+  
   #container {
     margin: 0 auto -45px;
   }
