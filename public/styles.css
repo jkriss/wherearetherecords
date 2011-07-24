@@ -284,5 +284,9 @@ li.store .name {
   #footer {
     font-size: 12pt;
   }
+  
+  .details {
+    width: auto;
+  }
 }
 
