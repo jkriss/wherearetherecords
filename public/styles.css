@@ -77,7 +77,7 @@ ul#stores {
 }
 
 li.store {
-  width: 480px;
+  width: 500px;
   background: #fff;
   font-size: 1.3em;
   border: none;
@@ -94,6 +94,8 @@ li.store {
 
 .details {
   padding-left: 115px;
+  width: 220px;
+  min-height: 145px;
 }
 
 img.store {
@@ -230,7 +232,7 @@ img.map {
 li.store .name {
   font-family: ff-market-web, Helvetica, Arial, sans-serif;
   font-size: 1.6em;
-  margin: 10px 0;
+  margin: 3px 0 10px 0;
 }
 
 
