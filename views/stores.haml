@@ -34,4 +34,4 @@
             %a{ :href => store.url }
               %img.rating{ :src => store.rating_img_url_small, :alt => 'yelp rating', :style => 'border:0' }
         
-            %a.rating_link{ :href => store.url } read reviews
+            %a.rating_link{ :href => store.url } read #{pluralize store.review_count, 'review'}
