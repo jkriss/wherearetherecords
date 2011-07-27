@@ -62,6 +62,7 @@ error do
 end
 
 get '/' do
+  cache_control :public, :max_age => 3600
   haml :index
   # @address = '02139'
   # @stores = RecordStoreFinder.find :address => @address
